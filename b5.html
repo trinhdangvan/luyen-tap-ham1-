@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form>
+    <input type="text" id="result" >
+        <input type="button" id="search" value="search" onclick="checkArr()">
+        </form>
+        <p id="end"></p>
+        <script>
+        function checkArr() {
+            let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+            let x = document.getElementById("result").value;
+            let y = null;
+            for (let i = 0; i < arr2.length; i++) {
+                if (x === arr1[i]) {
+                    y = arr2[i];
+                }
+                document.getElementById("end").innerHTML = y;
+            }
+        }
+    checkArr();
+</script>
+
+
+
+</body>
+</html>
